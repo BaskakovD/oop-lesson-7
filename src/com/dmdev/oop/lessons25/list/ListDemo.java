@@ -7,6 +7,11 @@ import java.util.List;
 public class ListDemo {
     public static void main(String[] args) throws InterruptedException {
         List<Integer> integers = Collections.synchronizedList (new ArrayList<>());
+        String value = "pavlic";
+        String substring = value.substring(3,5);
+        System.out.println(substring);
+
+
 
         ListThread listThread1 = new ListThread (integers);
         ListThread listThread2 = new ListThread (integers);

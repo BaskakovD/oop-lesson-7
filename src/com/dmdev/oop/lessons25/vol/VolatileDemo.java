@@ -1,10 +1,10 @@
 package com.dmdev.oop.lessons25.vol;
 
 public class VolatileDemo {
-    private static boolean flag = false;
+    private volatile static boolean flag = false;
     public static void main(String[] args) throws InterruptedException {
         Thread thread1 = new Thread(() -> {
-            if (!flag) {
+            while (!flag) {
                 System.out.println("still false");
             }
         });
