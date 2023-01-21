@@ -9,19 +9,19 @@ import java.util.stream.Stream;
 public class CashBoxRunner {
     public static void main(String[] args) throws InterruptedException {
         Queue<Cashbox> cashboxes = new ArrayDeque<>(List.of(new Cashbox(), new Cashbox()));
-        List <Thread> threads = Stream.of (
-                new BuyerThread(cashboxes),
-                new BuyerThread(cashboxes),
-                new BuyerThread(cashboxes),
-                new BuyerThread(cashboxes),
-                new BuyerThread(cashboxes),
-                new BuyerThread(cashboxes),
-                new BuyerThread(cashboxes),
-                new BuyerThread(cashboxes),
-        )
+        List<Thread> threads = Stream.of(
+                        new BuyerThread(cashboxes),
+                        new BuyerThread(cashboxes),
+                        new BuyerThread(cashboxes),
+                        new BuyerThread(cashboxes),
+                        new BuyerThread(cashboxes),
+                        new BuyerThread(cashboxes),
+                        new BuyerThread(cashboxes),
+                        new BuyerThread(cashboxes)
+                        )
                 .map(Thread::new)
                 .peek(Thread::start)
-                .collect(Collectors.toSet());
+                .collect(Collectors.toList());
 
         for (Thread thread : threads)
         {
