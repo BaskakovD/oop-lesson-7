@@ -1,7 +1,4 @@
-package com.dmdev.oop.MyWork;
-
-import javax.sound.midi.SoundbankResource;
-import javax.swing.*;
+package com.dmdev.oop.mywork1;
 
 public class Main {
     public static void main(String[] args) {

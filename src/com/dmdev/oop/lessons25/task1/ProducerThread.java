@@ -23,7 +23,7 @@ public class ProducerThread implements Runnable {
                 }
                 list.notifyAll();
                 try {
-                    int randomWaitValue = RandomUtil.getRandom(5);
+                    int randomWaitValue = 20;
                     System.out.println("producer waits: " + randomWaitValue);
                     list.wait(randomWaitValue);
                 } catch (InterruptedException exception) {

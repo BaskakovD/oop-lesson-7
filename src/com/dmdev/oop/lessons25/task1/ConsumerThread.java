@@ -22,9 +22,9 @@ public class ConsumerThread implements Runnable {
                     System.out.println("consumer is waiting, list is empty");
                 }
                 try {
-                    int random = 80;
+                    int random = 10;
                     System.out.println("consumer waits: " + random);
-//                    list.notifyAll();
+                    list.notifyAll();
                     list.wait(random);
                 } catch (InterruptedException exception) {
                     exception.printStackTrace();

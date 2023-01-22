@@ -1,4 +1,4 @@
-package com.dmdev.oop.MyWork;
+package com.dmdev.oop.mywork1;
 import javax.swing.*;
 
 public class SomeClass {
